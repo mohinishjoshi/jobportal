@@ -3,4 +3,10 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+  # attr_accessible :first_name, :last_name, :interests, :burthday, :location, :email
+  #        has_many :jobs, :through => :user_jobs
+
+  def applied? (job)
+    return UserJob.find_by_user_id_and_job_id(self.id, job.id).present?
+  end
 end
