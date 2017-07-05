@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  completed_at: 2017-07-05 15:41:35
+  description: MyText
+  title: MyText
+  organization: MyText
+  user_id: 1
+  location: MyString
+  skills: MyText
+  experience: 1
+
+two:
+  completed_at: 2017-07-05 15:41:35
+  description: MyText
+  title: MyText
+  organization: MyText
+  user_id: 1
+  location: MyString
+  skills: MyText
+  experience: 1
