@@ -46,7 +46,7 @@ group :development do
 end
 
 gem 'binding_of_caller'
-gem 'devise', github: 'plataformatec/devise'
+gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'bootstrap-sass', '3.3.5'
