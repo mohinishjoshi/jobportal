@@ -4,7 +4,9 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
 # Use postgresql as the database for Active Record
-gem 'pg'
+group :production do
+  gem 'pg'
+end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -43,6 +45,7 @@ gem 'bundler'
 group :development do
   gem 'better_errors'
   gem 'pry-rails'
+  gem 'pg'
 end
 
 gem 'binding_of_caller'

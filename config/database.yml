@@ -80,6 +80,8 @@ test:
 #
 production:
   <<: *default
-  database: jobportal_production
-  username: jobportal
-  password: <%= ENV['JOBPORTAL_DATABASE_PASSWORD'] %>
+  database: d645tpjm6ne8g1
+  username: gkmlomixmdsgvp
+  password: 0b3b4759d58b34062d73f2440285d9029b2b9e51816bafec8fd9416eecaabb22
+  port: 5432
+  host: ec2-54-75-248-193.eu-west-1.compute.amazonaws.com
