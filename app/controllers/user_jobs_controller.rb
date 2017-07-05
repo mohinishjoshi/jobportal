@@ -1,7 +1,7 @@
 class UserJobsController < ApplicationController
   before_filter :require_user_signed_in, :only => [:create]
   def index
-    @jobs = current_user.jobs
+    @jobs = UserJob.where(:user_id => current_user.id)
   end
 
   def show
@@ -10,7 +10,7 @@ class UserJobsController < ApplicationController
 
   def create
     user_job = UserJob.new
-    user_job.user = current_user
+    user_job.user_id = current_user.id
     user_job.job_id = params[:id]
     if user_job.save
       flash[:success] = "Successfully applied for the job."

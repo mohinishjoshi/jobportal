@@ -1,4 +1,7 @@
 class UserJob < ActiveRecord::Base
-  has_one :job
-  has_one :user
+  belongs_to :job
+  belongs_to :user
+
+  validates_presence_of :user_id
+  validates_presence_of :job_id
 end

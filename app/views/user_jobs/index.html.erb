@@ -15,19 +15,16 @@
     </tr>
   </thead>
   <tbody>
-    <% @jobs.each do |job| %>
+    <% @jobs.each do |user_job| %>
       <tr>
-        <td><%= job.id %></td>
-        <td><%= job.title %></td>
-        <td><%= job.organization %></td>
-        <td><%= job.location %></td>
-        <td><%= job.skills %></td>
-        <td><%= job.experience %></td>
+        <td><%= user_job.job.id %></td>
+        <td><%= user_job.job.title %></td>
+        <td><%= user_job.job.organization %></td>
+        <td><%= user_job.job.location %></td>
+        <td><%= user_job.job.skills %></td>
+        <td><%= user_job.job.experience %></td>
         <td>
-          <%= link_to job_path(job), :class => 'btn btn-xs', :title => "#{ t('.show', :default => t('helpers.links.show')) }" do %>
-            <%= glyph 'info-sign' %>
-            <%= glyph 'pencil' %>
-          <%- end -%>
+          <%= link_to 'Show', job_path(user_job.job), :class => 'btn btn-xs', :title => "#{ t('.show', :default => t('helpers.links.show')) }" %>
         </td>
       </tr>
     <% end %>
